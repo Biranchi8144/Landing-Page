@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Stylish Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Ani<span>Mate</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <!-- Animated background -->
+    <div class="animated-bg">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-content fade-in">
+        <h1 class="slide-up">Create Animated & Stylish Websites</h1>
+        <p class="slide-up-delay">Build fast, responsive, and modern websites with smooth animations.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary bounce" href="#features">Get Started</a>
+          <a class="btn btn-ghost" href="#contact">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-visual zoom-in" aria-hidden="true">
+        <img src="https://picsum.photos/420/280" alt="Hero image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features container">
+    <h2 class="fade-in">Awesome Features</h2>
+    <div class="features-grid">
+      <article class="feature-card float">
+        <h3>⚡ Fast</h3>
+        <p>Optimized code and layout for super-fast loading.</p>
+      </article>
+      <article class="feature-card float">
+        <h3>📱 Responsive</h3>
+        <p>Looks perfect on mobile, tablet, and desktop screens.</p>
+      </article>
+      <article class="feature-card float">
+        <h3>🎨 Stylish</h3>
+        <p>Modern colors, smooth animations, and clean design.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container contact fade-in">
+    <h2>Contact Us</h2>
+    <p>Ready to build something amazing? Let’s connect!</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> AniMate. All rights reserved.</p>
+      <div class="social">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">💼</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile nav
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".primary-nav");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      toggle.classList.toggle("open");
+    });
+
+    // Set year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
